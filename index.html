@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Party Organiser||Divyanshu & Company</title>
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+Bhai+2&family=Bree+Serif&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        #above{
+            display: flex;
+            flex-direction: column;
+            position: relative;
+
+        }
+        #above::before{
+            content: " ";
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            border-bottom-left-radius: 10px;
+            border-bottom-right-radius: 10px;
+            z-index: -2;
+            opacity: 0.4;
+            background: url("/img/concert-g9d55462b0_1920.jpg") no-repeat center center/cover;
+
+        }
+        #navbar::before {
+            content: " ";
+            position: absolute;
+            height: 100%;
+            width: 100%;
+            left: 0;
+            top: 0;
+            background-color: black;
+            z-index: -1;
+            opacity: 0.4;
+        }
+
+        #navbar {
+            display: flex;
+            width: 100%;
+            list-style: none;
+            position: relative;
+            justify-content: center;
+            font-family: 'Baloo Bhai 2', cursive;
+        }
+
+        #navbar li a {
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+            border-radius: 20px;
+            font-size: 1.8rem;
+            /* border:solid; */
+            margin: 20px;
+            color: black;
+            padding: 10px;
+        }
+
+        #navbar li a:hover {
+            background-color: green;
+            color: white;
+        }
+
+        #logo1 img {
+            display: block;
+            width: 136px;
+            margin: auto;
+            margin-top: 0.5rem;
+        }
+
+        
+
+        #mid-container {
+            display: flex;
+            width: 100%;
+            height: 100%;
+            justify-content: center;
+            font-family: 'Bree Serif', serif;
+            /* position: absolute; */
+        }
+
+        #mid {
+            display: flex;
+            width: 100%;
+            justify-content: center;
+            align-items: center;
+            /* position: relative; */
+            margin: 10vh
+        }
+
+        /* utility class */
+        .h-primary {
+            font-size: 3.8rem;
+            font-family: 'Bree Serif', serif;
+        }
+
+        .h-secondary {
+            font-size: 2.8rem;
+            font-family: 'Bree Serif', serif;
+        }
+
+        .center {
+            text-align: center;
+        }
+
+        .start {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            height: 100%;
+        }
+
+        .start p {
+            font-size: 1.8rem;
+        }
+
+        .form-group {
+            display: flex;
+            margin: 0.5rem;
+            border-radius: 25px;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+            width: 20%;
+            height: 100%;
+            /* background-color: cyan; */
+            font-size: 1.2rem;
+            transition-property: all 0s;
+        }
+
+        .form-group input,
+        .form-group select option,
+        .form-group select{
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            text-align: center;
+            justify-content: center;
+            align-items: center;
+            padding: 0.5rem;
+            margin: 10px;
+            border-radius: 10px;
+            font-family: 'Bree Serif', serif;
+        }
+        .form-group select{
+           
+            margin-left:20px;
+        }
+
+        .form-group:hover {
+            transform: scale(1.5);
+        }
+        #type-container::before{
+            content: " ";
+            left: 0;
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            z-index: -1;
+            opacity: 0.4;
+            background:url("/img/concert-g85ec027bd_1280.jpg") no-repeat center center/cover;
+
+        }
+        #type-container{
+            position: relative;
+            margin:1rem 0;
+        }
+        #parties{
+            display: flex;
+            flex-direction: column;
+            width:100%;
+            position: relative;
+        }
+        #row1,#row2{
+            display:flex;
+            justify-content:space-evenly;
+            align-items: center;
+            margin: 10px;
+            padding: 10px;
+        }
+        .items{
+            margin:10px;
+            border:2px solid red;
+            border-radius: 15px;
+            padding: 0.5rem;
+            background-color: cyan;
+            font-family: 'Bree Serif', serif;
+            transform: all 0s ease-in-out;
+        }
+        .items:hover{
+            transform: scale(1.1);
+
+        }
+        
+        .logos{
+            width: 20rem;
+            height: 15rem;
+            display: block;
+            margin: auto;
+            border-radius: 10px;
+        }
+        select{
+            display: block;
+            margin: auto;
+        }
+        .end::before{
+            content: " ";
+            left: 0;
+            width: 100%;
+            height: 110%;
+            position: absolute;
+            z-index: -1;
+            opacity: 0.4;
+            background:url("/img/telephone-g0b0217263_1920.jpg") no-repeat center center/cover;
+
+        }
+        .end{
+            position: relative;
+        }
+        #clients{
+            display: flex;
+            margin:2rem 0;
+            justify-content: space-evenly;
+        }
+        .client{
+            width:140px;
+            height:100px;
+            padding: 0.5rem;
+        }
+        #khtm{
+            background-color: black;
+            font-family: 'Bree Serif', serif;
+            color: white;
+            margin-top: 0;}
+        @media  screen and (max-width:1047px) {
+            .start p{
+                font-size: 1.5rem;
+            }
+           
+            
+            .form-group:hover{
+                transform:none;
+            }
+        }
+        @media  screen and (max-width:772px) {
+            .start p{
+                font-size: 1rem;
+            }
+            #row1,#row2{
+                flex-direction: column;
+            }
+           #navbar li a{
+            font-size: 1rem;
+            padding: 5px 0px;
+            margin: 10px;
+           }
+            #clients{
+                flex-wrap: wrap;
+            }
+
+            
+        }
+        @media  screen and (max-width:556px){
+           
+            .h-primary{
+                font-size: 3.5rem;
+            }
+            .h-secondary{
+                font-size: 2.4rem;
+            }
+            #row1,#row2{
+                margin: 0;
+                margin-top: 5px;
+            }
+        }
+        @media  screen and (max-width:432px)
+        {
+            #navbar{
+                margin:0px;
+                padding: 1px;
+            }
+            .items{
+                margin: 2px;
+                padding: 0px;
+                font-size: 1rem;
+            }
+            #mid{
+                flex-direction: column;
+            }
+            #mid-container::before{
+                height: 130%;
+            }
+            #logo1 img{
+                width:100px;
+            }
+        }
+        @media  screen and (max-width:354px)
+        {
+            
+            .items:hover{
+                transform: none;
+            }
+            .logos{
+                width: 150px;
+            }
+        }
+        @media  screen and (max-width:278px)
+        {
+           
+            #navbar{
+                padding: 0px;
+                font-size: 0.8rem;
+                overflow:hidden ;
+            }
+            .h-primary{
+                font-size: 2.5rem;
+            }
+            .h-secondary{
+                font-size: 1.8rem;
+            }
+            .start p,.items{
+                font-size: 0.8rem;
+            }
+            
+        }
+    </style>
+</head>
+
+<body>
+    <section id="above">
+    <div class="navigation">
+        <ul id="navbar">
+            <li class="item"><a href="#">Home</a> </li>
+            <li class="item"><a href="#">Our Planners</a></li>
+            <li class="item"><a href="#">Gallery</a></li>
+            <li class="item"><a href="/css10.html" target="_blank">About us</a></li>
+        </ul>
+    </div>
+    <section id="mid-container">
+        <div id="mid">
+
+            <div class="start">
+                <div id="logo1"><img src="/img/DC_Comics_logo.svg" alt="DC"></div>
+                <h1 class="h-primary center">Let's Party</h1>
+                <p class="center">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Doloremque, reprehenderit
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eum porro quae quo doloribus provident
+                    ipsum commodi? Sed saepe dolore minima accusamus nisi numquam?</p>
+            </div>
+            <div class="form-group center">
+                <form action="no.php">
+                    <h2 class="h-secondary center">Contact us</h2>
+                    <input type="text" placeholder="Enter Your Name" class="center">
+                    <input type="email" placeholder="Enter Your email" class="center">
+                    <input type="phone" placeholder="Phone number" class="center">
+                    <!-- <label for="type" class="center">Party type</label> -->
+                    <select name="parties" class="center" id="type" placeholder="select">
+                        <option value="Birthday">Birthday Party</option>
+                        <option value="Success">Success Party</option>
+                        <option value="kitty">Kitty Party</option>
+                        <option value="wedding">Wedding Party</option>
+                        <option value="anniversary">Anniversary</option>
+                    </select>
+                </form>
+        </div>
+    </section>
+    </section>
+    <section id="type-container">
+
+        <h1 class="h-primary center">We Organise..</h1>
+        <section id="parties">
+            <section id="row1">
+                <div class="items">
+                    <img src="/img/photo_2022-09-04_14-09-42.jpg" alt="Birthday" class="logos">
+                    <h2 class="h-secondary center">Birthday Party</h2>
+                    <p class="center">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iusto, error aut. Ad ut reprehenderit nulla
+                        corrupti delectus, eveniet nostrum unde non sunt praesentium corporis fugit quas est repellat
+                        perspiciatis accusamus, neque ipsam eius mollitia rem accusantium. Animi eius itaque laudantium,
+                        unde excepturi cum reiciendis culpa perspiciatis eligendi, minus iste asperiores!</p>
+                    </div>
+                    <div class="items">
+                        <img src="/img/photo_2022-09-04_15-58-58.jpg" alt="Marriage" class="logos">
+                        <h2 class="h-secondary center">Wedding Party</h2>
+                        <p class="center">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iusto, error aut. Ad ut reprehenderit nulla
+                            corrupti delectus, eveniet nostrum unde non sunt praesentium corporis fugit quas est repellat
+                            perspiciatis accusamus, neque ipsam eius mollitia rem accusantium. Animi eius itaque laudantium,
+                            unde excepturi cum reiciendis culpa perspiciatis eligendi, minus iste asperiores!</p>
+                        </div>
+            </section>
+            <section id="row2">
+                <div class="items">
+                    <img src="/img/photo_2022-09-04_16-04-29.jpg" alt="success" class="logos">
+                    <h2 class="h-secondary center">Success Party</h2>
+                    <p class="center">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iusto, error aut. Ad ut reprehenderit nulla
+                        corrupti delectus, eveniet nostrum unde non sunt praesentium corporis fugit quas est repellat
+                        perspiciatis accusamus, neque ipsam eius mollitia rem accusantium. Animi eius itaque laudantium,
+                        unde excepturi cum reiciendis culpa perspiciatis eligendi, minus iste asperiores!</p>
+                    </div>
+                    <div class="items">
+                        <img src="/img/photo_2022-09-04_16-12-52.jpg" alt="Fest" class="logos">
+                        <h2 class="h-secondary center">College Fests</h2>
+                        <p class="center">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iusto, error aut. Ad ut reprehenderit nulla
+                            corrupti delectus, eveniet nostrum unde non sunt praesentium corporis fugit quas est repellat
+                            perspiciatis accusamus, neque ipsam eius mollitia rem accusantium. Animi eius itaque laudantium,
+                            unde excepturi cum reiciendis culpa perspiciatis eligendi, minus iste asperiores!</p>
+                        </div>
+                    </section>
+                </section>
+            </section>
+            <section class="end">
+                <h1 class="h-primary center">Our Regular Clients </h1>
+                <div id="clients">
+                    <img src="/img/Reliance_Industries_Logo.svg" alt="Reliance" class="client">
+                    <img src="/img/Tata_logo.svg" alt="Tata" class="client">
+                    <img src="/img/Adani_logo_2012.svg" alt="Adani" class="client">
+                    <img src="/img/Aditya_Birla_Group_Logo.svg" alt="ABG" class="client">
+                    <img src="/img/Mahindra_Rise_New_Logo.svg" alt="Mahindra" class="client">
+                </div>
+            </section>
+
+    <footer id="khtm" class="center">
+        <p>Copyright &copy; www.DRmanagement.com ,All rights reserved!</p>
+    </footer>
+</body>
+
+</html>
