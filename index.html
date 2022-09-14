@@ -243,6 +243,20 @@
             font-family: 'Bree Serif', serif;
             color: white;
             margin-top: 0;}
+         #btn{
+                border:2px solid black;
+                border-radius:0.5rem;
+                display: block;
+                position: relative;
+                left:20px;
+                margin:auto;
+                background-color:rgb(110, 112, 84);
+
+            }
+            #btn:hover{
+                background-color: brown;
+
+            }
         @media  screen and (max-width:1047px) {
             .start p{
                 font-size: 1.5rem;
@@ -370,6 +384,7 @@
                         <option value="wedding">Wedding Party</option>
                         <option value="anniversary">Anniversary</option>
                     </select>
+                     <input type="button" value="Submit Now" id="btn" onclick="command()">
                 </form>
         </div>
     </section>
@@ -421,6 +436,11 @@
     <footer id="khtm" class="center">
         <p>Copyright &copy; www.DRmanagement.com ,All rights reserved!</p>
     </footer>
+         <script>
+        function command() {
+            alert("Form is Submitted");
+        }
+    </script>
 </body>
 
 </html>
