@@ -142,25 +142,29 @@
         .form-group input,
         .form-group select option,
         .form-group select{
-            display: flex;
-            flex-direction: column;
-            width: 100%;
-            text-align: center;
-            justify-content: center;
-            align-items: center;
             padding: 0.5rem;
             margin: 10px;
             border-radius: 10px;
             font-family: 'Bree Serif', serif;
         }
-        .form-group select{
-           
-            margin-left:20px;
-        }
+        
 
         .form-group:hover {
             transform: scale(1.5);
         }
+        #btn{
+                border:2px solid black;
+                border-radius:0.5rem;
+                text-align: center;
+                position: relative;
+                margin:auto;
+                background-color:rgb(110, 112, 84);
+
+            }
+            #btn:hover{
+                background-color: brown;
+
+            }
         #type-container::before{
             content: " ";
             left: 0;
@@ -210,10 +214,7 @@
             margin: auto;
             border-radius: 10px;
         }
-        select{
-            display: block;
-            margin: auto;
-        }
+       
         .end::before{
             content: " ";
             left: 0;
@@ -238,22 +239,50 @@
             height:100px;
             padding: 0.5rem;
         }
+        .profiles{
+            border:2px solid;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            margin: 20px;
+            border-radius: 5px;
+           
+        }
+        .profiles h3{
+            font-size: 2rem;
+            text-align: center;
+        }
+        .profiles p{
+            font-size: 1.5rem;
+            padding: 0.5rem;
+            font-family: 'Baloo Bhai 2', cursive;
+        }
+        .pimg{
+            height:10rem;
+            width:10rem;
+            margin: 1rem;
+            border:2px solid;
+            box-shadow: 2px black;
+        }
+       
+        #planner{
+            /* background-color:cyan; */
+            display: flex;
+            /* flex-wrap: wrap; */
+            
+         
+            height: 100%;
+            margin:1rem 0rem;
+
+        }
+
         #khtm{
             background-color: black;
             font-family: 'Bree Serif', serif;
             color: white;
             margin-top: 0;}
-         #btn{
-                border:2px solid black;
-                border-radius:0.5rem;
-                display: block;
-                position: relative;
-                left:20px;
-                margin:auto;
-                background-color:rgb(110, 112, 84);
-
-            }
-           
+       
         @media  screen and (max-width:1047px) {
             .start p{
                 font-size: 1.5rem;
@@ -277,6 +306,9 @@
             margin: 10px;
            }
             #clients{
+                flex-wrap: wrap;
+            }
+            #planner{
                 flex-wrap: wrap;
             }
 
@@ -353,26 +385,40 @@
     <div class="navigation">
         <ul id="navbar">
             <li class="item"><a href="#">Home</a> </li>
-            <li class="item"><a href="#">Our Planners</a></li>
+            <li class="item"><a href="#" onclick="togglehide()">Our Planners</a></li>
             <li class="item"><a href="#">Gallery</a></li>
             <li class="item"><a href="css10.html" target="_blank">About us</a></li>
         </ul>
     </div>
+    <section id="planner">
+        <div class="profiles"><img src="Namrta_rana.jpg" alt="" class="pimg">
+        <h3 class="h-secondary">Namrta Rana</h3>
+        <p class="center">She organised 10 events for Reliance digital and oath ceremony of Prime Minister Of India.She also won the best party planner award three times.</p>
+        </div>
+        <div class="profiles"><img src="Manik_garg.jpg" alt="" class="pimg">
+        <h3 class="h-secondary">Manik Garg</h3>
+        <p class="center">He organised 8 events for Adani Powers and 2 at Rashtrapati Bhavan.He also won the best party planner award two times.</p>
+        </div>
+        <div class="profiles"><img src="Deepika_Tomar.jpg" alt="" class="pimg">
+        <h3 class="h-secondary">Deepika Tomar</h3>
+        <p class="center">She organised 15 events for Tata Motors and 3 at Governer House of Delhi.She also won the best party planner award five times.</p>
+        </div>
+    </section>
     <section id="mid-container">
         <div id="mid">
 
             <div class="start">
-                <div id="logo1"><img src="img/DC_Comics_logo.svg" alt="DC"></div>
+                <div id="logo1"><img src="/img/DC_Comics_logo.svg" alt="DC"></div>
                 <h1 class="h-primary center">Let's Party</h1>
-                <p class="center">Best Party Planner Website Designs by Divyanshu party organizer .
-                     Parties can be more fun and exciting when you let experienced planners do the perfect planning.</p>
+                <p class="center"> Best Party Planner Website Designs by Divyanshu party organizer .
+                     Parties can be more fun and exciting when you let experienced planners do the perfect planning</p>
             </div>
             <div class="form-group center">
                 <form action="no.php">
                     <h2 class="h-secondary center">Contact us</h2>
-                    <input type="text" placeholder="Enter Your Name" class="center">
-                    <input type="email" placeholder="Enter Your email" class="center">
-                    <input type="phone" placeholder="Phone number" class="center">
+                    <input type="text" placeholder="Enter Your Name">
+                    <input type="email" placeholder="Enter Your email">
+                    <input type="phone" placeholder="Phone number">
                     <!-- <label for="type" class="center">Party type</label> -->
                     <select name="parties" class="center" id="type" placeholder="select">
                         <option value="Birthday">Birthday Party</option>
@@ -381,8 +427,9 @@
                         <option value="wedding">Wedding Party</option>
                         <option value="anniversary">Anniversary</option>
                     </select>
-                     <input type="button" value="Submit Now" id="btn" onclick="command()">
+                    <input type="button" value="Submit Now" id="btn" onclick="command()">
                 </form>
+                
         </div>
     </section>
     </section>
@@ -395,13 +442,13 @@
                     <img src="img/photo_2022-09-04_14-09-42.jpg" alt="Birthday" class="logos">
                     <h2 class="h-secondary center">Birthday Party</h2>
                     <p class="center">We provide pre-birthday photo shoots and various services .
-                        In other words, we give you the best facility at reasonable rate.</p>
+                        In other words, we give you the best facility at reasonable rate. </p>
                     </div>
                     <div class="items">
                         <img src="img/photo_2022-09-04_15-58-58.jpg" alt="Marriage" class="logos">
                         <h2 class="h-secondary center">Wedding Party</h2>
                         <p class="center">Planning a wedding is no easy task so let us do the best work for you.
-                            In other words, we give you the best facility at reasonable rate.</p>
+                            In other words, we give you the best facility at reasonable rate. </p>
                         </div>
             </section>
             <section id="row2">
@@ -433,10 +480,20 @@
     <footer id="khtm" class="center">
         <p>Copyright &copy; www.DRmanagement.com ,All rights reserved!</p>
     </footer>
-         <script>
+    <script>
         function command() {
-            alert("Form is Submitted");
+            confirm("Do you want to submit Form?");
         }
+        let para=document.getElementById("planner");
+        para.style.display="none";
+        function togglehide() {
+            if (para.style.display=="none") {
+                para.style.display="flex";
+                
+            }
+            else
+            para.style.display="none";
+            }
     </script>
 </body>
 
